@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 9</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 9</h2>
+
+<div>
+<p>1. 100-45?</p>
+<button onclick="check(this,false)">60</button>
+<button onclick="check(this,true)">55</button>
+</div>
+
+<div>
+<p>2. Найменша планета?</p>
+<button onclick="check(this,true)">Меркурій</button>
+<button onclick="check(this,false)">Марс</button>
+</div>
+
+<div>
+<p>3. Скільки материків?</p>
+<button onclick="check(this,false)">5</button>
+<button onclick="check(this,true)">6</button>
+</div>
+
+<div>
+<p>4. Яка валюта США?</p>
+<button onclick="check(this,true)">Долар</button>
+<button onclick="check(this,false)">Євро</button>
+</div>
+
+<div>
+<p>5. Хто відкрив Америку?</p>
+<button onclick="check(this,false)">Магеллан</button>
+<button onclick="check(this,true)">Колумб</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
