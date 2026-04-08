@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 13</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 13: Наука</h2>
+
+<div>
+<p>1. Який хімічний елемент становить основу органічного життя?</p>
+<button onclick="check(this,false)">Азот</button>
+<button onclick="check(this,true)">Вуглець</button>
+<button onclick="check(this,false)">Кремній</button>
+</div>
+
+<div>
+<p>2. Чому дорівнює швидкість світла у вакуумі (приблизно)?</p>
+<button onclick="check(this,true)">300 000 км/с</button>
+<button onclick="check(this,false)">150 000 км/с</button>
+<button onclick="check(this,false)">1 000 000 км/с</button>
+</div>
+
+<div>
+<p>3. Хто відкрив пеніцилін?</p>
+<button onclick="check(this,false)">Луї Пастер</button>
+<button onclick="check(this,false)">Марія Кюрі</button>
+<button onclick="check(this,true)">Александр Флемінг</button>
+</div>
+
+<div>
+<p>4. Яка планета має найбільшу кількість супутників?</p>
+<button onclick="check(this,false)">Юпітер</button>
+<button onclick="check(this,true)">Сатурн</button>
+<button onclick="check(this,false)">Нептун</button>
+</div>
+
+<div>
+<p>5. Який орган людського тіла споживає найбільше енергії?</p>
+<button onclick="check(this,true)">Мозок</button>
+<button onclick="check(this,false)">Серце</button>
+<button onclick="check(this,false)">Печінка</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
