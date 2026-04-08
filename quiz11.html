@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 11</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 11</h2>
+
+<div>
+<p>1. 12×12?</p>
+<button onclick="check(this,false)">124</button>
+<button onclick="check(this,true)">144</button>
+</div>
+
+<div>
+<p>2. Яка планета четверта від Сонця?</p>
+<button onclick="check(this,true)">Марс</button>
+<button onclick="check(this,false)">Юпітер</button>
+</div>
+
+<div>
+<p>3. Який хімічний символ золота?</p>
+<button onclick="check(this,false)">Ag</button>
+<button onclick="check(this,true)">Au</button>
+</div>
+
+<div>
+<p>4. Скільки зубів у дорослої людини?</p>
+<button onclick="check(this,false)">28</button>
+<button onclick="check(this,true)">32</button>
+</div>
+
+<div>
+<p>5. Найглибший океан планети?</p>
+<button onclick="check(this,true)">Тихий</button>
+<button onclick="check(this,false)">Атлантичний</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
