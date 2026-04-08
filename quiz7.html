@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 7</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 7</h2>
+
+<div>
+<p>1. 20/4?</p>
+<button onclick="check(this,false)">6</button>
+<button onclick="check(this,true)">5</button>
+</div>
+
+<div>
+<p>2. Столиця Німеччини?</p>
+<button onclick="check(this,true)">Берлін</button>
+<button onclick="check(this,false)">Мюнхен</button>
+</div>
+
+<div>
+<p>3. Скільки хвилин у годині?</p>
+<button onclick="check(this,false)">100</button>
+<button onclick="check(this,true)">60</button>
+</div>
+
+<div>
+<p>4. Який газ дихаємо?</p>
+<button onclick="check(this,false)">Водень</button>
+<button onclick="check(this,true)">Кисень</button>
+</div>
+
+<div>
+<p>5. Найбільша річка?</p>
+<button onclick="check(this,true)">Амазонка</button>
+<button onclick="check(this,false)">Дніпро</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
