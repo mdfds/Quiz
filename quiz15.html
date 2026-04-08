@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 15</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 15: Ерудит</h2>
+
+<div>
+<p>1. Хто намалював «Дівчину з перловою сережкою»?</p>
+<button onclick="check(this,true)">Ян Вермер</button>
+<button onclick="check(this,false)">Леонардо да Вінчі</button>
+<button onclick="check(this,false)">Рембрандт</button>
+</div>
+
+<div>
+<p>2. Скільки клавіш у стандартного піаніно?</p>
+<button onclick="check(this,false)">76</button>
+<button onclick="check(this,true)">88</button>
+<button onclick="check(this,false)">102</button>
+</div>
+
+<div>
+<p>3. Яке число наступне у послідовності Фібоначчі: 1, 1, 2, 3, 5, 8...?</p>
+<button onclick="check(this,false)">12</button>
+<button onclick="check(this,true)">13</button>
+<button onclick="check(this,false)">15</button>
+</div>
+
+<div>
+<p>4. В якому році почалася Перша світова війна?</p>
+<button onclick="check(this,true)">1914</button>
+<button onclick="check(this,false)">1918</button>
+<button onclick="check(this,false)">1939</button>
+</div>
+
+<div>
+<p>5. Що вивчає ентомологія?</p>
+<button onclick="check(this,false)">Птахів</button>
+<button onclick="check(this,false)">Слова</button>
+<button onclick="check(this,true)">Комах</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
