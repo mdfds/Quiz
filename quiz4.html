@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 4</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 4</h2>
+
+<div>
+<p>1. 7+8?</p>
+<button onclick="check(this,true)">15</button>
+<button onclick="check(this,false)">14</button>
+</div>
+
+<div>
+<p>2. Столиця Італії?</p>
+<button onclick="check(this,true)">Рим</button>
+<button onclick="check(this,false)">Мілан</button>
+</div>
+
+<div>
+<p>3. Скільки годин у добі?</p>
+<button onclick="check(this,true)">24</button>
+<button onclick="check(this,false)">12</button>
+</div>
+
+<div>
+<p>4. Який океан найбільший?</p>
+<button onclick="check(this,true)">Тихий</button>
+<button onclick="check(this,false)">Атлантичний</button>
+</div>
+
+<div>
+<p>5. Яка планета ближче до Сонця?</p>
+<button onclick="check(this,true)">Меркурій</button>
+<button onclick="check(this,false)">Земля</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn, isCorrect){
+const parent = btn.parentElement;
+const buttons = parent.querySelectorAll('button');
+buttons.forEach(b => b.disabled = true);
+btn.classList.add(isCorrect ? 'correct' : 'wrong');
+}
+</script>
+
+</body>
+</html>
