@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 12</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Складний квіз</h2>
+
+<div>
+<p>1. √169?</p>
+<button onclick="check(this,false)">12</button>
+<button onclick="check(this,true)">13</button>
+</div>
+
+<div>
+<p>2. Хто створив теорію відносності?</p>
+<button onclick="check(this,true)">Ейнштейн</button>
+<button onclick="check(this,false)">Ньютон</button>
+</div>
+
+<div>
+<p>3. Найдовша річка?</p>
+<button onclick="check(this,false)">Амазонка</button>
+<button onclick="check(this,true)">Ніл</button>
+</div>
+
+<div>
+<p>4. Столиця Канади?</p>
+<button onclick="check(this,true)">Оттава</button>
+<button onclick="check(this,false)">Торонто</button>
+</div>
+
+<div>
+<p>5. π ≈ ?</p>
+<button onclick="check(this,false)">3.5</button>
+<button onclick="check(this,true)">3.14</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
