@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 10</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 10</h2>
+
+<div>
+<p>1. 8×8?</p>
+<button onclick="check(this,false)">60</button>
+<button onclick="check(this,true)">64</button>
+</div>
+
+<div>
+<p>2. Столиця Іспанії?</p>
+<button onclick="check(this,true)">Мадрид</button>
+<button onclick="check(this,false)">Барселона</button>
+</div>
+
+<div>
+<p>3. Скільки годин у 2 добах?</p>
+<button onclick="check(this,false)">24</button>
+<button onclick="check(this,true)">48</button>
+</div>
+
+<div>
+<p>4. Найшвидша тварина?</p>
+<button onclick="check(this,true)">Гепард</button>
+<button onclick="check(this,false)">Лев</button>
+</div>
+
+<div>
+<p>5. Який газ у воді?</p>
+<button onclick="check(this,false)">Азот</button>
+<button onclick="check(this,true)">Водень</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
