@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 14</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 14: Світ</h2>
+
+<div>
+<p>1. Яка країна має найбільшу кількість часових поясів (12)?</p>
+<button onclick="check(this,false)">США</button>
+<button onclick="check(this,false)">Росія</button>
+<button onclick="check(this,true)">Франція</button>
+</div>
+
+<div>
+<p>2. У якій країні знаходиться найбільша пустеля світу — Антарктична?</p>
+<button onclick="check(this,false)">Австралія</button>
+<button onclick="check(this,true)">Антарктида</button>
+<button onclick="check(this,false)">Чилі</button>
+</div>
+
+<div>
+<p>3. Яке місто було столицею Візантійської імперії?</p>
+<button onclick="check(this,false)">Рим</button>
+<button onclick="check(this,true)">Константинополь</button>
+<button onclick="check(this,false)">Афіни</button>
+</div>
+
+<div>
+<p>4. На якому континенті немає жодного активного вулкана?</p>
+<button onclick="check(this,true)">Австралія</button>
+<button onclick="check(this,false)">Африка</button>
+<button onclick="check(this,false)">Європа</button>
+</div>
+
+<div>
+<p>5. Яка мова має найбільшу кількість носіїв у світі?</p>
+<button onclick="check(this,false)">Англійська</button>
+<button onclick="check(this,false)">Іспанська</button>
+<button onclick="check(this,true)">Китайська (Мандарин)</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
