@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Квіз 2</title>
+  <style>
+    button { margin:5px; padding:8px; }
+    .correct { background-color: lightgreen; }
+    .wrong { background-color: lightcoral; }
+  </style>
+</head>
+<body>
+  <h2>Квіз 2</h2>
+
+  <div>
+    <p>1. 5+5?</p>
+    <button onclick="check(this,true)">10</button>
+    <button onclick="check(this,false)">8</button>
+  </div>
+
+  <div>
+    <p>2. Сонце це?</p>
+    <button onclick="check(this,true)">Зірка</button>
+    <button onclick="check(this,false)">Планета</button>
+  </div>
+
+  <div>
+    <p>3. Скільки днів у тижні?</p>
+    <button onclick="check(this,true)">7</button>
+    <button onclick="check(this,false)">5</button>
+  </div>
+
+  <div>
+    <p>4. Яка мова в Україні?</p>
+    <button onclick="check(this,true)">Українська</button>
+    <button onclick="check(this,false)">Італійська</button>
+  </div>
+
+  <div>
+    <p>5. Лід це?</p>
+    <button onclick="check(this,true)">Твердий стан</button>
+    <button onclick="check(this,false)">Рідина</button>
+  </div>
+
+  <br><a href="index.html">Назад</a>
+
+  <script>
+    function check(btn, isCorrect){
+      const parent = btn.parentElement;
+      const buttons = parent.querySelectorAll('button');
+      buttons.forEach(b => b.disabled = true);
+
+      if(isCorrect){
+        btn.classList.add('correct');
+      } else {
+        btn.classList.add('wrong');
+      }
+    }
+  </script>
+</body>
+</html>
