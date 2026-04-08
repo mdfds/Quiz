@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 8</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 8</h2>
+
+<div>
+<p>1. 11×2?</p>
+<button onclick="check(this,false)">20</button>
+<button onclick="check(this,true)">22</button>
+</div>
+
+<div>
+<p>2. Планета з кільцями?</p>
+<button onclick="check(this,true)">Сатурн</button>
+<button onclick="check(this,false)">Марс</button>
+</div>
+
+<div>
+<p>3. Скільки букв в алфавіті укр?</p>
+<button onclick="check(this,false)">30</button>
+<button onclick="check(this,true)">33</button>
+</div>
+
+<div>
+<p>4. Яка країна найбільша?</p>
+<button onclick="check(this,true)">Росія</button>
+<button onclick="check(this,false)">Індія</button>
+</div>
+
+<div>
+<p>5. Скільки секунд у хвилині?</p>
+<button onclick="check(this,false)">100</button>
+<button onclick="check(this,true)">60</button>
+</div>
+
+<a href="index.html">Назад</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
