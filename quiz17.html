@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 17</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 17: Біологія</h2>
+
+<div>
+<p>1. Яка група крові вважається універсальним донором?</p>
+<button onclick="check(this,true)">I (O)</button>
+<button onclick="check(this,false)">IV (AB)</button>
+<button onclick="check(this,false)">II (A)</button>
+</div>
+
+<div>
+<p>2. Де в тілі людини знаходиться найменша кістка?</p>
+<button onclick="check(this,false)">У носі</button>
+<button onclick="check(this,false)">У пальці</button>
+<button onclick="check(this,true)">У вусі</button>
+</div>
+
+<div>
+<p>3. Який процес дозволяє рослинам перетворювати світло на енергію?</p>
+<button onclick="check(this,false)">Дихання</button>
+<button onclick="check(this,true)">Фотосинтез</button>
+<button onclick="check(this,false)">Бродіння</button>
+</div>
+
+<div>
+<p>4. Скільки камер має серце крокодила?</p>
+<button onclick="check(this,false)">2</button>
+<button onclick="check(this,false)">3</button>
+<button onclick="check(this,true)">4</button>
+</div>
+
+<div>
+<p>5. Як називається молекула, що несе генетичний код?</p>
+<button onclick="check(this,true)">ДНК</button>
+<button onclick="check(this,false)">РНК</button>
+<button onclick="check(this,false)">Білок</button>
+</div>
+
+<a href="quiz16.html">Минулий квіз</a>
+<a href="index.html">Головна сторінка</a>
+<a href="quiz18.html">Наступний квіз</a>
+
+  
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
