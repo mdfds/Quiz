@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 19</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 19: Література</h2>
+
+<div>
+<p>1. Хто написав антиутопію «1984»?</p>
+<button onclick="check(this,true)">Джордж Орвелл</button>
+<button onclick="check(this,false)">Олдос Гакслі</button>
+<button onclick="check(this,false)">Рей Бредбері</button>
+</div>
+
+<div>
+<p>2. Яка п'єса Шекспіра є найдовшою?</p>
+<button onclick="check(this,false)">Король Лір</button>
+<button onclick="check(this,false)">Макбет</button>
+<button onclick="check(this,true)">Гамлет</button>
+</div>
+
+<div>
+<p>3. Хто є автором роману «Тіні забутих предків»?</p>
+<button onclick="check(this,false)">Іван Франко</button>
+<button onclick="check(this,true)">Михайло Коцюбинський</button>
+<button onclick="check(this,false)">Леся Українка</button>
+</div>
+
+<div>
+<p>4. В якій країні народився письменник Франц Кафка?</p>
+<button onclick="check(this,false)">Німеччина</button>
+<button onclick="check(this,true)">Чехія</button>
+<button onclick="check(this,false)">Австрія</button>
+</div>
+
+<div>
+<p>5. Який літературний псевдонім мав Ерік Артур Блер?</p>
+<button onclick="check(this,false)">Марк Твен</button>
+<button onclick="check(this,true)">Джордж Орвелл</button>
+<button onclick="check(this,false)">Льюїс Керролл</button>
+</div>
+
+<a href="quiz18.html">Минулий квіз</a> | 
+<a href="index.html">Головна сторінка</a> | 
+<a href="quiz20.html">Наступний квіз</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
