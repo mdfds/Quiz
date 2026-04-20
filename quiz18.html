@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 18</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 18: IT</h2>
+
+<div>
+<p>1. Хто вважається першим програмістом в історії?</p>
+<button onclick="check(this,false)">Алан Тюрінг</button>
+<button onclick="check(this,true)">Ада Лавлейс</button>
+<button onclick="check(this,false)">Білл Гейтс</button>
+</div>
+
+<div>
+<p>2. Що означає абревіатура HTTP?</p>
+<button onclick="check(this,true)">HyperText Transfer Protocol</button>
+<button onclick="check(this,false)">High Tech Tool Process</button>
+<button onclick="check(this,false)">Hidden Text Type Page</button>
+</div>
+
+<div>
+<p>3. Яка компанія розробила мову програмування Java?</p>
+<button onclick="check(this,false)">Microsoft</button>
+<button onclick="check(this,false)">Apple</button>
+<button onclick="check(this,true)">Sun Microsystems</button>
+</div>
+
+<div>
+<p>4. Як називається основна плата комп'ютера?</p>
+<button onclick="check(this,true)">Материнська плата</button>
+<button onclick="check(this,false)">Процесорна плата</button>
+<button onclick="check(this,false)">Відеокарта</button>
+</div>
+
+<div>
+<p>5. Який рік вважається роком створення World Wide Web (WWW)?</p>
+<button onclick="check(this,false)">1985</button>
+<button onclick="check(this,true)">1989</button>
+<button onclick="check(this,false)">1995</button>
+</div>
+
+<a href="quiz17.html">Минулий квіз</a> | 
+<a href="index.html">Головна сторінка</a> | 
+<a href="quiz19.html">Наступний квіз</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
