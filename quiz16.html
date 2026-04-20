@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<title>Квіз 16</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Квіз 16: Історія</h2>
+
+<div>
+<p>1. Яка цивілізація побудувала місто Мачу-Пікчу?</p>
+<button onclick="check(this,false)">Ацтеки</button>
+<button onclick="check(this,true)">Інки</button>
+<button onclick="check(this,false)">Мая</button>
+</div>
+
+<div>
+<p>2. У якому році відбулося падіння Західної Римської імперії?</p>
+<button onclick="check(this,true)">476 рік</button>
+<button onclick="check(this,false)">395 рік</button>
+<button onclick="check(this,false)">527 рік</button>
+</div>
+
+<div>
+<p>3. Хто був першим імператором Китаю, який почав будувати Велику стіну?</p>
+<button onclick="check(this,false)">Хан Ву-ді</button>
+<button onclick="check(this,false)">Конфуцій</button>
+<button onclick="check(this,true)">Цінь Ши Хуан-ді</button>
+</div>
+
+<div>
+<p>4. Яку назву мала перша друкована книга в Україні (1574 р.)?</p>
+<button onclick="check(this,true)">Апостол</button>
+<button onclick="check(this,false)">Буквар</button>
+<button onclick="check(this,false)">Острозька Біблія</button>
+</div>
+
+<div>
+<p>5. Під час якої війни відбулася битва під Ватерлоо?</p>
+<button onclick="check(this,false)">Столітня війна</button>
+<button onclick="check(this,true)">Наполеонівські війни</button>
+<button onclick="check(this,false)">Семирічна війна</button>
+</div>
+
+<a href="quiz15.html">Минулий квіз</a>
+<a href="index.html">Головна сторінка</a>
+<a href="quiz17.html">Наступний квіз</a>
+
+<script>
+function check(btn,c){
+const p=btn.parentElement; 
+p.querySelectorAll('button').forEach(b=>b.disabled=true); 
+btn.classList.add(c?'correct':'wrong');
+}
+</script>
+
+</body>
+</html>
