@@ -14,8 +14,8 @@ h1, h2 {
 /* Меню */
 a {
   display: inline-block;
-  margin: 7px;
-  padding: 10px 17px;
+  margin: 5px;
+  padding: 10px 15px;
   text-decoration: none;
   background: #4CAF50;
   color: white;
